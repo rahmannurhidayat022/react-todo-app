@@ -42,7 +42,7 @@ export default function Navbar() {
 				<address className='text-center'>
 					<p>Lets connect with me</p>
 					<ul className='nav justify-content-center'>
-						<li className='nav-item border'>
+						<li className='nav-item border mb-3'>
 							<a
 								className='nav-link text-white'
 								href='#'
@@ -50,7 +50,7 @@ export default function Navbar() {
 								Github
 							</a>
 						</li>
-						<li className='nav-item border'>
+						<li className='nav-item border mb-3'>
 							<a
 								className='nav-link text-white'
 								href='#'
@@ -58,7 +58,7 @@ export default function Navbar() {
 								Facebook
 							</a>
 						</li>
-						<li className='nav-item border'>
+						<li className='nav-item border mb-3'>
 							<a
 								className='nav-link text-white'
 								href='#'

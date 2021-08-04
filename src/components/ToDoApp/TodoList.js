@@ -3,7 +3,7 @@ import React from 'react';
 export default function TodoList() {
 	return (
 		<ul className='nav-list'>
-			<li className='list half-border d-flex align-items-center'>
+			<li className='list half-radius d-flex align-items-center'>
 				<div className='ic-delete px-3 border-end'>
 					<span role='button' className='del-check'>
 						x
@@ -19,7 +19,7 @@ export default function TodoList() {
 					</form>
 				</div>
 			</li>
-			<li className='list half-border d-flex align-items-center'>
+			<li className='list half-radius d-flex align-items-center'>
 				<div className='ic-delete px-3 border-end'>
 					<span role='button' className='del-check'>
 						x

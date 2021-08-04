@@ -117,8 +117,12 @@ ul.nav-list {
 		border: 1px solid $gray-300;
 		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14);
 
-		&.half-border {
+		&.half-radius {
 			border-radius: 0 25px 25px 0;
+		}
+
+		&.full-radius {
+			border-radius: 25px;
 		}
 
 		.del-check {
@@ -135,5 +139,21 @@ ul.nav-list {
 			position: absolute;
 			right: 10px;
 		}
+
+		form {
+			input.form-control {
+				&:focus {
+					border: none;
+					box-shadow: none;
+				}
+			}
+		}
 	}
+}
+
+.button-primary {
+	width: 190px;
+	color: $white;
+	background: linear-gradient(112deg, #16aede 18.17%, #3ecb1a 95.89%);
+	border-radius: 50px;
 }
