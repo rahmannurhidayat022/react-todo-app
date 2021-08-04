@@ -70,3 +70,24 @@ nav.navbar {
 	border-image-source: linear-gradient(to right, $primary 0%, $teal 100%);
 	border-image-slice: 1;
 }
+
+.sidebar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background: linear-gradient(112deg, #16aede 18.17%, #3ecb1a 95.89%);
+	width: 35%;
+	transform: translateX(-100%);
+	transition: 0.256s ease-in-out;
+
+	.ic-close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+	&.open {
+		transform: translateX(0px);
+	}
+}
