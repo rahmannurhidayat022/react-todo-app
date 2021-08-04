@@ -72,6 +72,7 @@ nav.navbar {
 }
 
 .sidebar {
+	z-index: 999;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -104,5 +105,35 @@ nav.navbar {
 
 	&.open {
 		transform: translateX(0px);
+	}
+}
+
+ul.nav-list {
+	position: relative;
+	li.list {
+		margin-bottom: 10px;
+		width: 500px;
+		list-style: none;
+		border: 1px solid $gray-300;
+		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14);
+
+		&.half-border {
+			border-radius: 0 25px 25px 0;
+		}
+
+		.del-check {
+			font-weight: 700;
+			font-size: 30px;
+			color: $danger;
+		}
+
+		.content {
+			max-width: 90%;
+		}
+
+		.check-circle {
+			position: absolute;
+			right: 10px;
+		}
 	}
 }

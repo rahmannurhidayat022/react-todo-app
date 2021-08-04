@@ -8,11 +8,7 @@ import IconText from './IconText';
 export default function Navbar() {
 	const [toggler, setState] = React.useState(false);
 
-	const handleOpenSidebar = () => {
-		setState(!toggler);
-	};
-
-	const handleCloseSidebar = () => {
+	const handleToggler = () => {
 		setState(!toggler);
 	};
 
@@ -20,7 +16,7 @@ export default function Navbar() {
 		<>
 			<nav className='navbar navbar-light'>
 				<div className='container'>
-					<div className='toggler' onClick={handleOpenSidebar}>
+					<div className='toggler' onClick={handleToggler}>
 						<img
 							style={{ cursor: 'pointer' }}
 							className='img-fluid'
@@ -72,7 +68,7 @@ export default function Navbar() {
 						</li>
 					</ul>
 				</address>
-				<div className='ic-close' onClick={handleCloseSidebar}>
+				<div className='ic-close' onClick={handleToggler}>
 					<img
 						style={{ cursor: 'pointer' }}
 						src={Close}
