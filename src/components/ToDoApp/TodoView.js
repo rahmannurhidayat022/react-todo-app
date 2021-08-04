@@ -34,9 +34,19 @@ export default function TodoView() {
 		e.target.reset();
 	};
 
+	const handleDeleteTodos = (todoId) => {
+		const confirm = window.confirm('This data will delete on your storage ?');
+
+		if (confirm) {
+			const updateData = todos.data.filter((todo) => todo.id !== todoId);
+
+			setTodos({ data: updateData });
+		}
+	};
+
 	return (
 		<section className='d-flex flex-column justify-content-center align-items-center my-5'>
-			<TodoList todos={todos.data} />
+			<TodoList todos={todos.data} handleDeleteTodos={handleDeleteTodos} />
 			<TodoForm
 				handleOnChange={handleOnChange}
 				handleAddTodos={handleAddTodos}

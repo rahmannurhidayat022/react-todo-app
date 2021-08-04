@@ -1,15 +1,17 @@
 import React from 'react';
 
-export default function TodoList({ todos }) {
-	if (!todos.length) {
+export default function TodoList({ todos, handleDeleteTodos }) {
+	if (!todos.length > 0)
 		return <h2 className='h4 text-secondary'>No data yet, please enter</h2>;
-	}
 
 	const renderData = todos.map((todo) => {
 		return (
 			<li key={todo.id} className='list half-radius d-flex align-items-center'>
 				<div className='ic-delete px-3 border-end'>
-					<span role='button' className='del-check'>
+					<span
+						onClick={() => handleDeleteTodos(todo.id)}
+						role='button'
+						className='del-check'>
 						x
 					</span>
 				</div>
