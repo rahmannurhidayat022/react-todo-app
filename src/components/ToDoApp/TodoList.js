@@ -1,6 +1,10 @@
 import React from 'react';
 
 export default function TodoList({ todos }) {
+	if (!todos.length) {
+		return <h2 className='h4 text-secondary'>No data yet, please enter</h2>;
+	}
+
 	const renderData = todos.map((todo) => {
 		return (
 			<li key={todo.id} className='list half-radius d-flex align-items-center'>
