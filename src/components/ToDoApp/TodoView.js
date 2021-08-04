@@ -13,9 +13,7 @@ export default function TodoView() {
 	const handleOnChange = (e) => {
 		setTodos({
 			...todos,
-			id: Math.random(),
 			text: e.target.value,
-			complete: false,
 		});
 	};
 
@@ -25,9 +23,9 @@ export default function TodoView() {
 			data: [
 				...todos.data,
 				{
-					id: todos.id,
+					id: todos.data.length + 1,
 					text: todos.text,
-					complete: todos.complete,
+					complete: false,
 				},
 			],
 		});
