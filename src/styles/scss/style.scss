@@ -65,5 +65,8 @@
 }
 
 nav.navbar {
-	border-bottom: 1px solid $gray-300;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-image-source: linear-gradient(to right, $primary 0%, $teal 100%);
+	border-image-slice: 1;
 }
