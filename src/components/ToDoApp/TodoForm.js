@@ -1,12 +1,13 @@
 import React from 'react';
 import TodoButton from './TodoButton';
 
-export default function TodoForm() {
+export default function TodoForm({ handleOnChange, handleAddTodos, text }) {
 	return (
 		<ul className='nav-list mt-4'>
 			<li className='list full-radius mb-0'>
-				<form className='d-flex'>
+				<form onSubmit={handleAddTodos} className='d-flex'>
 					<input
+						onChange={handleOnChange}
 						name='text'
 						size='20'
 						className='ms-4 form-control border-0'

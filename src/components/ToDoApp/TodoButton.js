@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function TodoButton(props) {
 	const onClick = () => {
-		props.onClick = props.onClick();
+		if (props.onClick) props.onClick();
 	};
 
 	return (
