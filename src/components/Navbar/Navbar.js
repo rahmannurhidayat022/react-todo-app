@@ -5,11 +5,21 @@ import React from 'react';
 import IconText from './IconText';
 
 export default function Navbar() {
+	const [toggler, setState] = React.useState(false);
+
+	const handleOpenSidebar = () => {
+		setState(!toggler);
+	};
+
+	const handleCloseSidebar = () => {
+		setState(!toggler);
+	};
+
 	return (
 		<>
 			<nav className='navbar navbar-light'>
 				<div className='container'>
-					<div className='toggler'>
+					<div className='toggler' onClick={handleOpenSidebar}>
 						<img
 							style={{ cursor: 'pointer' }}
 							className='img-fluid'
@@ -20,7 +30,10 @@ export default function Navbar() {
 					<IconText />
 				</div>
 			</nav>
-			<div className='sidebar d-flex flex-column justify-content-center px-5 text-white'>
+			<div
+				className={`sidebar d-flex flex-column justify-content-center px-5 text-white ${
+					toggler === true ? ' open' : ''
+				}`}>
 				<blockquote className='blockquote'>
 					<p>
 						" Hi, I'm Rahman Nurhidayat, a web developer. Now I learn ReactJs. "
@@ -56,8 +69,12 @@ export default function Navbar() {
 						</li>
 					</ul>
 				</address>
-				<div className='ic-close'>
-					<img src={Close} alt='closing sidebar' />
+				<div className='ic-close' onClick={handleCloseSidebar}>
+					<img
+						style={{ cursor: 'pointer' }}
+						src={Close}
+						alt='closing sidebar'
+					/>
 				</div>
 			</div>
 		</>
