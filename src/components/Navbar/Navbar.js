@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Close from 'assets/icons/close.svg';
 import Hamburger from 'assets/icons/menu.svg';
+import PhotoProfile from 'assets/images/profile.jpg';
 import React from 'react';
 import IconText from './IconText';
 
@@ -34,15 +35,17 @@ export default function Navbar() {
 				className={`sidebar d-flex flex-column justify-content-center px-5 text-white ${
 					toggler === true ? ' open' : ''
 				}`}>
-				<blockquote className='blockquote'>
+				<div className='profile my-3'>
+					<img className='img-fluid' src={PhotoProfile} alt='author' />
+				</div>
+				<blockquote className='blockquote text-center mb-5'>
 					<p>
 						" Hi, I'm Rahman Nurhidayat, a web developer. Now I learn ReactJs. "
 					</p>
-					<p style={{ fontWeight: '300' }}>~ I Loved Javascript</p>
 				</blockquote>
-				<address>
-					<p>Lets connect with me in : </p>
-					<ul className='nav'>
+				<address className='text-center'>
+					<p>Lets connect with me</p>
+					<ul className='nav justify-content-center'>
 						<li className='nav-item border'>
 							<a
 								className='nav-link text-white'

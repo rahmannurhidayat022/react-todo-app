@@ -81,6 +81,21 @@ nav.navbar {
 	transform: translateX(-100%);
 	transition: 0.256s ease-in-out;
 
+	.profile {
+		margin: auto;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		overflow: hidden;
+		border-width: 5px;
+		border-style: solid;
+		border-image: $white;
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
 	.ic-close {
 		position: absolute;
 		top: 20px;
