@@ -1,7 +1,7 @@
+import Home from 'pages/Home';
+import React from 'react';
 import './styles/scss/style.scss';
 
-function App() {
-	return <div> </div>;
+export default function App() {
+	return <Home />;
 }
-
-export default App;
