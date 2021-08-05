@@ -14,14 +14,14 @@ export default function Navbar() {
 
 	return (
 		<>
-			<nav className='navbar navbar-light'>
-				<div className='container'>
-					<div className='toggler' onClick={handleToggler}>
+			<nav className="navbar navbar-light">
+				<div className="container">
+					<div className="toggler" onClick={handleToggler}>
 						<img
 							style={{ cursor: 'pointer' }}
-							className='img-fluid'
+							className="img-fluid"
 							src={Hamburger}
-							alt='hamburger-icon'
+							alt="hamburger-icon"
 						/>
 					</div>
 					<IconText />
@@ -31,48 +31,48 @@ export default function Navbar() {
 				className={`sidebar d-flex flex-column justify-content-center px-5 text-white ${
 					toggler === true ? ' open' : ''
 				}`}>
-				<div className='profile my-3'>
-					<img className='img-fluid' src={PhotoProfile} alt='author' />
+				<div className="profile my-3">
+					<img className="img-fluid" src={PhotoProfile} alt="author" />
 				</div>
-				<blockquote className='blockquote text-center mb-5'>
+				<blockquote className="blockquote text-center mb-5">
 					<p>
 						" Hi, I'm Rahman Nurhidayat, a web developer. Now I learn ReactJs. "
 					</p>
 				</blockquote>
-				<address className='text-center'>
+				<address className="text-center">
 					<p>Lets connect with me</p>
-					<ul className='nav justify-content-center'>
-						<li className='nav-item border mb-3'>
+					<ul className="nav justify-content-center">
+						<li className="nav-item border mb-3">
 							<a
-								className='nav-link text-white'
-								href='#'
+								className="nav-link text-white"
+								href="#"
 								style={{ backgroundColor: '#333' }}>
 								Github
 							</a>
 						</li>
-						<li className='nav-item border mb-3'>
+						<li className="nav-item border mb-3">
 							<a
-								className='nav-link text-white'
-								href='#'
+								className="nav-link text-white"
+								href="#"
 								style={{ backgroundColor: '#4267B2' }}>
 								Facebook
 							</a>
 						</li>
-						<li className='nav-item border mb-3'>
+						<li className="nav-item border mb-3">
 							<a
-								className='nav-link text-white'
-								href='#'
+								className="nav-link text-white"
+								href="#"
 								style={{ backgroundColor: '#0077b5' }}>
 								Linked
 							</a>
 						</li>
 					</ul>
 				</address>
-				<div className='ic-close' onClick={handleToggler}>
+				<div className="ic-close" onClick={handleToggler}>
 					<img
 						style={{ cursor: 'pointer' }}
 						src={Close}
-						alt='closing sidebar'
+						alt="closing sidebar"
 					/>
 				</div>
 			</div>
