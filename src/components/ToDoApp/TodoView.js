@@ -57,6 +57,10 @@ export default function TodoView() {
 				handleOnChange={handleOnChange}
 				handleAddTodos={handleAddTodos}
 			/>
+			<p className="my-3 text-secondary">
+				{todos.data.filter((todo) => !todo.complete).length} left to do of{' '}
+				{todos.data.length}
+			</p>
 		</section>
 	);
 }

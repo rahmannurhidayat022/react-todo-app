@@ -19,7 +19,13 @@ export default function TodoList({
 						x
 					</span>
 				</div>
-				<div className="content px-2">{todo.text}</div>
+				<div
+					style={{
+						textDecoration: todo.complete === true ? 'line-through' : 'none',
+					}}
+					className="content px-2">
+					{todo.text}
+				</div>
 				<div className="check-circle">
 					<form className="form-check">
 						<input
