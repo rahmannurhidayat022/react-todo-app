@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoButton from './TodoButton';
 
-export default function TodoForm({ handleOnChange, handleAddTodos, text }) {
+export default function TodoForm({ handleOnChange, handleAddTodos }) {
 	return (
 		<ul className="nav-list mt-4">
 			<li className="list full-radius mb-0">

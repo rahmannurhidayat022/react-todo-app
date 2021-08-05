@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import React from 'react';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
@@ -5,9 +6,6 @@ import TodoList from './TodoList';
 export default function TodoView() {
 	const [todos, setTodos] = React.useState({
 		data: [],
-		id: 1,
-		text: '',
-		complete: false,
 	});
 
 	const handleOnChange = (e) => {
@@ -23,7 +21,7 @@ export default function TodoView() {
 			data: [
 				...todos.data,
 				{
-					id: todos.data.length + 1,
+					id: nanoid(),
 					text: todos.text,
 					complete: false,
 				},
@@ -42,9 +40,19 @@ export default function TodoView() {
 		}
 	};
 
+	const handleToggleChecked = (todoId) => {
+		const todo = todos.data.find((todo) => todo.id === todoId);
+		todo.complete = !todo.complete;
+		setTodos({ data: [...todos.data] });
+	};
+
 	return (
 		<section className="d-flex flex-column justify-content-center align-items-center my-5">
-			<TodoList todos={todos.data} handleDeleteTodos={handleDeleteTodos} />
+			<TodoList
+				todos={todos.data}
+				handleDeleteTodos={handleDeleteTodos}
+				handleToggleChecked={handleToggleChecked}
+			/>
 			<TodoForm
 				handleOnChange={handleOnChange}
 				handleAddTodos={handleAddTodos}
