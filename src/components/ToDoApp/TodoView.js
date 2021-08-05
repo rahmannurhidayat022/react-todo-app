@@ -33,7 +33,7 @@ export default function TodoView() {
 	};
 
 	const handleDeleteTodos = (todoId) => {
-		const confirm = window.confirm('This data will delete on your storage ?');
+		const confirm = window.confirm('Are you sure ?');
 
 		if (confirm) {
 			const updateData = todos.data.filter((todo) => todo.id !== todoId);
@@ -43,7 +43,7 @@ export default function TodoView() {
 	};
 
 	return (
-		<section className='d-flex flex-column justify-content-center align-items-center my-5'>
+		<section className="d-flex flex-column justify-content-center align-items-center my-5">
 			<TodoList todos={todos.data} handleDeleteTodos={handleDeleteTodos} />
 			<TodoForm
 				handleOnChange={handleOnChange}
